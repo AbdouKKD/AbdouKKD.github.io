@@ -1,4 +1,4 @@
-@import "slick-carousel/slick/slick.css"; 
+@import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
 * {
@@ -9,9 +9,10 @@
 
 html, body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
+  background-color:#E6A00D ;
   color: #333;
   height: 100%;
+  line-height: 1.6;
 }
 
 a {
@@ -28,95 +29,115 @@ a:hover {
   --primary-blue: #0073CF; /* Chargers Powder Blue */
   --accent-gold: #FFC20E; /* Chargers Gold */
   --neutral-white: #FFFFFF;
+  --dark-blue: #0056A1; /* Darker Powder Blue */
+  --dark-gold: #E6A00D; /* Darker Gold */
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --transition-speed: 0.3s;
 }
 
 /* App-Specific Styles */
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
+  background: var(--neutral-white);
 }
 
 nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--primary-blue);
+  background: linear-gradient(90deg, var(--primary-blue), var(--accent-gold));
   color: var(--neutral-white);
-  padding: 10px 20px;
+  padding: 15px 25px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  box-shadow: 0px 5px 15px var(--shadow-color);
+  border-radius: 8px;
 }
 
 nav a {
   color: var(--neutral-white);
   font-weight: bold;
+  font-size: 16px;
+  transition: color var(--transition-speed) ease;
 }
 
 nav a:hover {
   text-decoration: underline;
+  color: var(--accent-gold);
 }
 
 h1, h2, h3 {
   color: var(--primary-blue);
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 button {
   background: var(--accent-gold);
   color: var(--neutral-white);
   border: none;
-  padding: 10px 15px;
-  font-size: 14px;
+  padding: 12px 18px;
+  font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color var(--transition-speed) ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 button:hover {
-  background: #e6a00d; /* Darker gold */
-  transform: scale(1.05); /* Slight scaling effect on hover */
+  background: var(--dark-gold);
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px var(--shadow-color);
 }
 
 /* Match Card Styles */
 .match-card {
   background: var(--neutral-white);
   border: 2px solid var(--accent-gold);
-  border-radius: 8px;
-  padding: 15px;
-  margin: 15px 0;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0px 5px 10px var(--shadow-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px var(--shadow-color);
 }
 
 .match-card h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--primary-blue);
-  transition: color 0.3s ease;
+  transition: color var(--transition-speed) ease;
 }
 
 .match-card h3:hover {
-  color: #0056A1; /* Darker Powder Blue */
+  color: var(--dark-blue);
 }
 
 .match-card p {
-  margin: 5px 0;
+  margin: 8px 0;
   color: #666;
 }
 
 .match-card a {
   background: var(--primary-blue);
   color: var(--neutral-white);
-  padding: 8px 12px;
+  padding: 10px 15px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-speed) ease;
 }
 
 .match-card a:hover {
-  background: #0056A1; /* Darker Powder Blue */
+  background: var(--dark-blue);
 }
 
 /* Favorites Section */
@@ -124,12 +145,12 @@ button:hover {
   padding: 20px;
   background: var(--neutral-white);
   border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 10px var(--shadow-color);
 }
 
 .favorites-container p {
   color: #666;
-  transition: color 0.3s ease;
+  transition: color var(--transition-speed) ease;
 }
 
 .favorites-container p:hover {
@@ -139,19 +160,22 @@ button:hover {
 .favorites-container button {
   background: var(--accent-gold);
   color: var(--neutral-white);
-  transition: background-color 0.3s ease;
+  padding: 12px 18px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color var(--transition-speed) ease;
 }
 
 .favorites-container button:hover {
-  background: #e6a00d; /* Darker Gold */
+  background: var(--dark-gold);
 }
 
 /* Match Details Page */
 .match-details {
-  padding: 20px;
+  padding: 25px;
   background: var(--neutral-white);
-  border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px var(--shadow-color);
 }
 
 .match-details h2 {
@@ -159,11 +183,12 @@ button:hover {
 }
 
 .match-details p {
-  margin: 10px 0;
+  margin: 12px 0;
   color: #666;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-size: 16px;
 }
 
 /* Mobile Responsiveness */
@@ -171,6 +196,7 @@ button:hover {
   nav {
     flex-direction: column;
     align-items: flex-start;
+    padding: 20px;
   }
 
   .app-container {
@@ -180,6 +206,7 @@ button:hover {
   .match-card {
     flex-direction: column;
     align-items: flex-start;
+    padding: 15px;
   }
 
   .match-card a {
@@ -189,4 +216,16 @@ button:hover {
 
 /* Accessibility */
 button:focus, a:focus {
-  outline: 2px solid var(--accent-gold);}
+  outline: 2px solid var(--accent-gold);
+}
+
+/* Gradient Footer */
+footer {
+  background: linear-gradient(90deg, var(--accent-gold), var(--primary-blue));
+  color: var(--neutral-white);
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0px -5px 15px var(--shadow-color);
+}
