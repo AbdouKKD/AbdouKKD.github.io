@@ -13,7 +13,6 @@ const App = () => {
   return (
     <div className="app-container">
       <StickyNav />  
-      <h1>Welcome to the Soccer App</h1> {/* Temporary*/}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
