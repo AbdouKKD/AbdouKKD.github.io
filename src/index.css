@@ -9,7 +9,7 @@
 
 html, body {
   font-family: 'Arial', sans-serif;
-  background-color:#E6A00D ;
+  background-color:#FFFFFF ;
   color: #333;
   height: 100%;
   line-height: 1.6;
@@ -44,19 +44,15 @@ a:hover {
 }
 
 nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  width: 100%;
   background: linear-gradient(90deg, var(--primary-blue), var(--accent-gold));
   color: var(--neutral-white);
-  padding: 15px 25px;
+  padding: 15px 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   box-shadow: 0px 5px 15px var(--shadow-color);
-  border-radius: 8px;
+  position: relative; /* So the logo doesn't affect navbar */
 }
-
 nav a {
   color: var(--neutral-white);
   font-weight: bold;
@@ -229,3 +225,4 @@ footer {
   border-radius: 10px 10px 0 0;
   box-shadow: 0px -5px 15px var(--shadow-color);
 }
+
