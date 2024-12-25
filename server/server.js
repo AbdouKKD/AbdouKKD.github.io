@@ -7,7 +7,7 @@ const PORT = 5000;
 
 app.use(cors());
 
-// Proxy route for football data
+// route for football data
 app.get('/api/matches', async (req, res) => {
   try {
     const apiUrl = 'https://api.football-data.org/v4/matches';

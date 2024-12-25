@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-// Fallback UI Component in case of error
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,7 +28,7 @@ const FavoritesPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetching data on component mount
+  
   useEffect(() => {
     const fetchFavorites = async () => {
       try {
@@ -37,9 +37,8 @@ const FavoritesPage = () => {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        console.log(data);  // Log the response to inspect structure
-
-        // Ensure data.matches is an array before setting state
+        console.log(data);  
+        
         if (Array.isArray(data.matches)) {
           setFavorites(data.matches);
         } else {
@@ -64,7 +63,7 @@ const FavoritesPage = () => {
   }
 
   if (favorites.length === 0) {
-    return <div>No favorite matches found.</div>; // Handle empty data case
+    return <div>No favorite matches found.</div>; 
   }
 
   return (
@@ -82,7 +81,7 @@ const FavoritesPage = () => {
   );
 };
 
-// Wrap the FavoritesPage in the ErrorBoundary to catch errors in this component
+
 const FavoritesPageWithErrorBoundary = () => (
   <ErrorBoundary>
     <FavoritesPage />

@@ -24,18 +24,18 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Global Variables */
+
 :root {
-  --primary-blue: #0073CF; /* Chargers Powder Blue */
-  --accent-gold: #FFC20E; /* Chargers Gold */
+  --primary-blue: #0073CF; 
+  --accent-gold: #FFC20E; 
   --neutral-white: #FFFFFF;
-  --dark-blue: #0056A1; /* Darker Powder Blue */
-  --dark-gold: #E6A00D; /* Darker Gold */
+  --dark-blue: #0056A1; 
+  --dark-gold: #E6A00D;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --transition-speed: 0.3s;
 }
 
-/* App-Specific Styles */
+
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
